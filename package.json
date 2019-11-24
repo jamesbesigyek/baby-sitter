@@ -1,0 +1,20 @@
+{
+  "name": "jbc",
+  "version": "1.0.0",
+  "description": "Junior baby center",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon server"
+  },
+  "author": "Besigye James Kiguuya",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.1",
+    "path": "^0.12.7",
+    "pug": "^2.0.4",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
