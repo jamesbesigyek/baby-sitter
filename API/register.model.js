@@ -10,7 +10,7 @@ let Register = new Schema({
     type: String
   },
   StaffTelephone: {
-    type: String
+    type: Number
   },
   StaffEmail: {
     type: String
@@ -24,4 +24,4 @@ let Register = new Schema({
     collection: 'registers'
 });
 
-module.exports = mongoose.model('Register', Register);
+module.exports = mongoose.model('Registers', Register);

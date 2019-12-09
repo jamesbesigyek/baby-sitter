@@ -1,13 +1,13 @@
 // post.model.js
 
 const express = require('express');
-const loginRoutes = express.Router();
+const registerRoutes = express.Router();
 
 // Require Post model in our routes module
 let Register = require('./register.model');
 
 // Defined store route
-registerRoutes.route('/').post(function (req, res) {
+registerRoutes.route('/register').post(function (req, res) {
   let register = new Register(req.body);
   register.save()
     .then(() => {

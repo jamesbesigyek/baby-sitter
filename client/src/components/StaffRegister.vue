@@ -13,20 +13,20 @@
       <!-- First Name -->
       <div class="md-form">
           <label for="staffFirstName">First Name</label>
-        <input type="text" id="StaffFirstName" class="form-control" v-model="post.StaffFirstName">
+        <input type="text" id="StaffFirstName" class="form-control" v-model="user.StaffFirstName">
       
       </div>
       <!-- Last Name -->
       <div class="md-form">
           <label for="staffLastName">Last Name</label>
-        <input type="text" id="StaffLastName" class="form-control" v-model="post.StaffLastName">
+        <input type="text" id="StaffLastName" class="form-control" v-model="user.StaffLastName">
       
       </div>
 
       <!-- Telephone Contact -->
       <div class="md-form">
           <label for="staffFirstName">Telephone</label>
-        <input type="number" id="StaffTelephone" class="form-control" v-model="post.StaffTelephone">
+        <input type="number" id="StaffTelephone" class="form-control" v-model="user.StaffTelephone">
       
       </div>
 
@@ -35,14 +35,14 @@
       <!-- Email -->
       <div class="md-form">
           <label for="LoginFormEmail">E-mail</label>
-        <input type="email" id="StaffEmail" class="form-control" v-model="post.StaffEmail">
+        <input type="email" id="StaffEmail" class="form-control" v-model="user.StaffEmail">
       
       </div>
 
       <!-- Password -->
       <div class="md-form">
         <label for="LoginFormPassword">Password</label>
-        <input type="password" id="StaffPassword" class="form-control" v-model="post.StaffPassword">
+        <input type="password" id="StaffPassword" class="form-control" v-model="user.StaffPassword">
         
       </div>
 
@@ -72,13 +72,14 @@
 export default {
   data(){
         return {
-          post:{}
+         user:{} //starts with an empty object- two way data binding
         }
   },
   methods: {
     registerStaff(){
       let uri = 'http://localhost:4000/register';
-      this.axios.post(uri, this.post).then(() => {
+
+      this.axios.post(uri, this.user).then(() => {
         this.$router.push({name: 'registers'})  //registers is the collection name
       })
     }

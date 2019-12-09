@@ -30,12 +30,12 @@ const routes = [
    component: AppLogin  
 },
 {
-  name: 'login',
+  name: 'About-us',
   path: '/About-Us',
  component: AboutUs  
 },
 {
-  name: 'login',
+  name: 'register',
   path: '/register',
  component: StaffRegister  
 },
@@ -47,4 +47,4 @@ new Vue(Vue.util.extend({ router }, App)).$mount('#app');
 
 new Vue({
   render: h => h(App),
-}).$mount('#app')
+}).$mount('app')
