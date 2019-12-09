@@ -64,7 +64,7 @@ app.use(passport.session())
 const loginRoutes        = require("./controller/loginRoutes")
 const registerRoutes     = require("./controller/registerRoutes")
 const reportsRoutes     = require("./controller/reportsRoutes")
-app.use("/",loginRoutes)
+app.use("/login",loginRoutes)
 app.use("/",registerRoutes)
 app.use("/",reportsRoutes)
 

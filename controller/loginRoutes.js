@@ -44,35 +44,7 @@ router.get("/", (req, res)=>{
 })
 
 router.post("/login",async(req, res, next)=>{
-    /* passport.authenticate('local-login', (err, user, info)=> {
-        if (err) {
-         return next(err); // will generate a 500 error
-        }
-        if (!user) {
-          return res.status(409).render('/login', {errMsg: info.errMsg});
-        }
-        req.login(user, (err)=>{
-          if(err){
-            console.error(err);
-            return next(err);
-          }
-          return res.redirect('/test');
-        });
-    })(req, res, next);   return next(err); // will generate a 500 error
-        }
-        if (!user) {
-          return res.status(409).render('/login', {errMsg: info.errMsg});
-        }
-        req.login(user, (err)=>{
-          if(err){
-            console.error(err);
-            return next(err);
-          }
-          return res.redirect('/test');
-        });
-    })(req, res, next); */
-
-
+    
     console.log(req.body)
     const login = new Post (req.body)
     console.log(login)
